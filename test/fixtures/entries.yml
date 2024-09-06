@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company: MyString
+  kwh: 9.99
+  startdate: 2024-09-06
+  enddate: 2024-09-06
+  approved: false
+  user: one
+
+two:
+  company: MyString
+  kwh: 9.99
+  startdate: 2024-09-06
+  enddate: 2024-09-06
+  approved: false
+  user: two
