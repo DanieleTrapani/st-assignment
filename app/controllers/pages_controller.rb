@@ -2,9 +2,9 @@ class PagesController < ApplicationController
   def redirect
     path = case current_user.role
            when 'employee'
-             employee_path
+             employee_tasks_path
            when 'manager'
-             manager_path
+             manager_tasks_path
            end
 
     redirect_to(path)

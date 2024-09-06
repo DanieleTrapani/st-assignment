@@ -15,4 +15,7 @@ Rails.application.routes.draw do
   authenticated(:user) do
     root(to: 'pages#redirect', as: :root)
   end
+
+  get('tasks/employee', to: 'tasks#employee', as: :employee_tasks)
+  get('tasks/manager', to: 'tasks#manager', as: :manager_tasks)
 end
