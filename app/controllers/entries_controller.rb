@@ -17,7 +17,7 @@ class EntriesController < ApplicationController
 
   def manager
     redirect_to(root_path) if current_user.role != 'manager'
-    @entries = Entry.all.order(approved: :asc)
+    @entries = Entry.all.order(approved: :desc)
   end
 
   def approve
