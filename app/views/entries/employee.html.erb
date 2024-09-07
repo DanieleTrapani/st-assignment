@@ -1,12 +1,12 @@
 <div class="mx-auto bg-white">
   <h4 class="header font-bold text-xl mb-4">New Entry</h4>
   <%= simple_form_for(@entry) do |f| %>
-    <div class="space-y-4"> <!-- Add spacing between each form group -->
-      <div class="flex items-center space-x-4"> <!-- Align label/input pairs on one line -->
-        <div class="w-1/4"> <!-- Label takes 1/4 of the width -->
+    <div class="space-y-4">
+      <div class="flex items-center space-x-4">
+        <div class="w-1/4">
           <%= f.label :company, class: 'block text-sm font-medium text-gray-700' %>
         </div>
-        <div class="w-3/4"> <!-- Input field takes the rest of the width -->
+        <div class="w-3/4">
           <%= f.input_field :company, class: 'block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm' %>
         </div>
       </div>
@@ -34,7 +34,6 @@
           <%= f.input_field :enddate, html5: true, class: 'block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm' %>
         </div>
       </div>
-      <!-- Add more fields as necessary -->
       <div class="flex justify-end">
         <%= f.submit 'Submit', class: 'inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500' %>
       </div>
