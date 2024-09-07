@@ -14,5 +14,10 @@
       <%= render "shared/navbar" %>
       <%= yield %>
     </main>
+    <% flash.each do |type, msg| %>
+      <div class="inline-block bg-yellow-300 p-2 font-sm font-bold text-[#003252] mx-auto rounded-lg text-center absolute bottom-20 right-20">
+        <%= msg %>
+      </div>
+    <% end %>
   </body>
 </html>
