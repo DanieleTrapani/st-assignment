@@ -1,24 +1,9 @@
-# README
+Take Home Assignment for Job Interview
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple organizational dashboard with 2 roles: Manager and Employee.
 
-Things you may want to cover:
+The Employee can add entries regarding the energy consumption of a company in a given period.
+The Manager can review the entries of the Employees and accept or refuse them.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This Dashboard was built with Rails, TailwindCSS and PostgreSQL.
+Gems include: Devise, SimpleForm and Capybara.
