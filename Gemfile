@@ -66,4 +66,5 @@ group :test do
 end
 
 gem 'devise'
+gem 'feathericon-rails'
 gem 'tailwindcss-rails', '~> 2.7'

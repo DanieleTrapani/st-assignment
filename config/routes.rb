@@ -18,4 +18,8 @@ Rails.application.routes.draw do
 
   get('tasks/employee', to: 'tasks#employee', as: :employee_tasks)
   get('tasks/manager', to: 'tasks#manager', as: :manager_tasks)
+
+  post('tasks/:id', to: 'tasks#create', as: :task)
+  get('tasks/:id', to: 'tasks#approve', as: :approve_task)
+  get('tasks/:id', to: 'tasks#reject', as: :reject_task)
 end

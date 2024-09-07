@@ -1,0 +1,51 @@
+<div class="relative overflow-x-auto mx-auto">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:text-gray-400">
+      <tr>
+        <th scope="col" class="px-6 py-3">
+          Company
+        </th>
+        <th scope="col" class="px-6 py-3">
+          kW/h
+        </th>
+        <th scope="col" class="px-6 py-3">
+          Start Date
+        </th>
+        <th scope="col" class="px-6 py-3">
+          End Date
+        </th>
+        <th scope="col" class="px-6 py-3 text-center">
+          Approve
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @entries.each do |entry| %>
+        <tr class="bg-white border-b">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-600 whitespace-nowrap">
+            <%= entry.company %>
+          </th>
+          <td class="px-6 py-4">
+            <%= entry.kwh %>
+          </td>
+          <td class="px-6 py-4">
+            <%= entry.start_date %>
+          </td>
+          <td class="px-6 py-4">
+            <%= entry.end_date %>
+          </td>
+          <td class="px-6 py-4">
+            <% if entry.approved != nil %>
+              <p class="text-center">Completed</p>
+            <% else %>
+              <div class="flex gap-2">
+                <%= link_to "Approve", approve_task_path(entry), class: "btn-primary" %>
+                <%= link_to "Reject", reject_task_path(entry), class: "btn-danger" %>
+              </div>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

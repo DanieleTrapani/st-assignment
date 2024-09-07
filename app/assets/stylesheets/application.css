@@ -14,6 +14,8 @@
  *= require_self
  */
 
+*= require feathericon
+
 body {
   background-color: #F0F0F0;
 }
