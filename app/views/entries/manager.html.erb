@@ -25,7 +25,7 @@
     <tbody>
       <% @entries.each do |entry| %>
         <tr class="bg-white border-b">
-          <th scope="row" class="px-6 py-4 font-medium text-gray-600 whitespace-nowrap">
+          <th scope="row" class="px-6 py-4 font-medium text-gray-600">
             <%= entry.company %>
           </th>
           <td class="px-6 py-4">
@@ -37,7 +37,7 @@
           <td class="px-6 py-4">
             <%= entry.end_date %>
           </td>
-          <td class="px-6 py-4">
+          <td class="px-6 py-4 whitespace-nowrap">
             <%= entry.user.full_name %>
           </td>
           <td class="px-6 py-4">
