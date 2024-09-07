@@ -11,7 +11,7 @@ class EntriesController < ApplicationController
     if @entry.save
       redirect_to(employee_entries_path)
     else
-      render(:new, status: :unprocessable_entity)
+      render(:employee, status: :unprocessable_entity)
     end
   end
 
