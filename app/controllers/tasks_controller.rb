@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   def employee
     redirect_to(root_path) if current_user.role != 'employee'
+    @entry = Entry.new
   end
 
   def manager
