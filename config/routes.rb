@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get('entries/employee', to: 'entries#employee', as: :employee_entries)
   get('entries/manager', to: 'entries#manager', as: :manager_entries)
 
-  post('entries/:id', to: 'entries#create', as: :entry)
+  resources(:entries, only: %i[create])
   get('entries/approve/:id', to: 'entries#approve', as: :approve_entry)
   get('entries/reject/:id', to: 'entries#reject', as: :reject_entry)
 end

@@ -1,6 +1,12 @@
-<%= form_with model: @entry do |f| %>
-  <div class="flex">
-    <%= f.label :company %>
-    <%= f.string :company %>
+<div class="mx-auto bg-white">
+  <h4 class="header font-bold text-xl">New Entry</h4>
+  <div class="py-6">
+    <%= simple_form_for @entry do |f| %>
+      <%= f.input :company  %>
+      <%= f.input :kwh %>
+      <%= f.input :startdate, html5: true %>
+      <%= f.input :enddate, html5: true %>
+      <%= f.submit "Submit", class: "btn-primary" %>
+    <% end %>
   </div>
-<% end %>
+</div>

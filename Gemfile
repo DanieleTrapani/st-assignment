@@ -67,4 +67,5 @@ end
 
 gem 'devise'
 gem 'feathericon-rails'
+gem 'simple_form'
 gem 'tailwindcss-rails', '~> 2.7'
