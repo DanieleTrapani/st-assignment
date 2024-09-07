@@ -14,6 +14,9 @@
         <th scope="col" class="px-6 py-3">
           End Date
         </th>
+        <th scope="col" class="px-6 py-3">
+          Entered By
+        </th>
         <th scope="col" class="px-6 py-3 text-center">
           Approve
         </th>
@@ -35,8 +38,11 @@
             <%= entry.end_date %>
           </td>
           <td class="px-6 py-4">
+            <%= entry.user.full_name %>
+          </td>
+          <td class="px-6 py-4">
             <% if entry.approved != nil %>
-              <p class="text-center">Completed</p>
+              <p class="text-center"><%= entry.approved ? "Approved" : "Rejected" %></p>
             <% else %>
               <div class="flex gap-2">
                 <%= link_to "Approve", approve_task_path(entry), class: "btn-primary" %>

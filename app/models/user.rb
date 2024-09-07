@@ -9,7 +9,7 @@ class User < ApplicationRecord
     :validatable
   )
 
-  has_many :entries
+  has_many :entries, dependent: :destroy
 
   def full_name
     "#{first_name} #{last_name}"

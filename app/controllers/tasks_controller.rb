@@ -9,7 +9,6 @@ class TasksController < ApplicationController
   end
 
   def approve
-    raise
     entry = Entry.find(params[:id])
     entry.update(approved: true)
     entry.save

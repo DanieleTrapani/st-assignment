@@ -20,6 +20,6 @@ Rails.application.routes.draw do
   get('tasks/manager', to: 'tasks#manager', as: :manager_tasks)
 
   post('tasks/:id', to: 'tasks#create', as: :task)
-  get('tasks/:id', to: 'tasks#approve', as: :approve_task)
-  get('tasks/:id', to: 'tasks#reject', as: :reject_task)
+  get('tasks/approve/:id', to: 'tasks#approve', as: :approve_task)
+  get('tasks/reject/:id', to: 'tasks#reject', as: :reject_task)
 end
