@@ -16,10 +16,10 @@ Rails.application.routes.draw do
     root(to: 'pages#redirect', as: :root)
   end
 
-  get('tasks/employee', to: 'tasks#employee', as: :employee_tasks)
-  get('tasks/manager', to: 'tasks#manager', as: :manager_tasks)
+  get('entries/employee', to: 'entries#employee', as: :employee_entries)
+  get('entries/manager', to: 'entries#manager', as: :manager_entries)
 
-  post('tasks/:id', to: 'tasks#create', as: :task)
-  get('tasks/approve/:id', to: 'tasks#approve', as: :approve_task)
-  get('tasks/reject/:id', to: 'tasks#reject', as: :reject_task)
+  post('entries/:id', to: 'entries#create', as: :entry)
+  get('entries/approve/:id', to: 'entries#approve', as: :approve_entry)
+  get('entries/reject/:id', to: 'entries#reject', as: :reject_entry)
 end
