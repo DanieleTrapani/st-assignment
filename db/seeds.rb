@@ -37,7 +37,7 @@ employee = User.create!(
 puts('done')
 
 puts('creating entries...')
-Entry.create!(company: 'Tesla', kwh: 12.5, startdate: Date.today, enddate: Date.today, user: employee)
-Entry.create!(company: 'Ford', kwh: 18.5, startdate: Date.today, enddate: Date.today, user: employee)
-Entry.create!(company: 'BMW', kwh: 200.3, startdate: Date.today, enddate: Date.today, user: employee)
+Entry.create!(company: 'Tesla', kwh: 12.5, startdate: Date.yesterday, enddate: Date.today, user: employee)
+Entry.create!(company: 'Ford', kwh: 18.5, startdate: Date.yesterday, enddate: Date.today, user: employee)
+Entry.create!(company: 'BMW', kwh: 200.3, startdate: Date.yesterday, enddate: Date.today, user: employee)
 puts('done')

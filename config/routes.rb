@@ -20,6 +20,6 @@ Rails.application.routes.draw do
   get('entries/manager', to: 'entries#manager', as: :manager_entries)
 
   resources(:entries, only: %i[create])
-  get('entries/approve/:id', to: 'entries#approve', as: :approve_entry)
-  get('entries/reject/:id', to: 'entries#reject', as: :reject_entry)
+  patch('entries/approve/:id', to: 'entries#approve', as: :approve_entry)
+  patch('entries/reject/:id', to: 'entries#reject', as: :reject_entry)
 end
